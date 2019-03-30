@@ -1,0 +1,19 @@
+ѕолучение всех аргументов функцией, котора€ работает с запросами, выполненными успешно
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $.ajax("mydata.json", {
+      success: function (data, status, jqxhr) {
+        console.log("Status: " + status);
+        console.log("jqXHR Status: " + jqxhr.status + " " + jqxhr.statusText);
+        console.log(jqxhr.getAllResponseHeaders());
+
+        var template = $('#flowerTmpl');
+        template.tmpl(data.slice(0, 3)).appendTo("#row1");
+        template.tmpl(data.slice(3)).appendTo("#row2");
+      }
+    });
+  });
+</script>
+
+јргумент status Ц строка, котора€ описывает результат запроса. ‘ункци€, которую мы указали, использу€ настройку success, работает только с успешно выполненными запросами, так что, в основном, этот аргумент имеет значение success

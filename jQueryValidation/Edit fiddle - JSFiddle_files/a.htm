@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="a_data/jquery-2.js"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="a_data/result-light.css">
+  
+
+  
+    
+      <script type="text/javascript" src="a_data/jquery.js"></script>
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="a_data/font-awesome.css">
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="a_data/bootstrap.css">
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="a_data/bootstrap-theme.css">
+    
+  
+    
+      <script type="text/javascript" src="a_data/bootstrap.js"></script>
+    
+  
+
+  <style type="text/css">
+    
+  </style>
+
+  <title> by dark_diesel</title>
+
+  
+    
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+(function ($) {
+    $(document).ready(function () {
+        jQuery.validator.setDefaults({
+            highlight: function (element, errorClass, validClass) {
+                if (element.type === "radio") {
+                    this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+                } else {
+                    $(element).closest('.form-group').removeClass('has-success has-feedback').addClass('has-error has-feedback');
+                    $(element).closest('.form-group').find('i.fa').remove();
+                    $(element).closest('.form-group').append('<i class="fa fa-exclamation fa-lg form-control-feedback"></i>');
+                }
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                if (element.type === "radio") {
+                    this.findByName(element.name).removeClass(errorClass).addClass(validClass);
+                } else {
+                    $(element).closest('.form-group').removeClass('has-error has-feedback').addClass('has-success has-feedback');
+                    $(element).closest('.form-group').find('i.fa').remove();
+                    $(element).closest('.form-group').append('<i class="fa fa-check fa-lg form-control-feedback"></i>');
+                }
+            }
+        });
+
+        $("form").validate({
+            rules: {
+                'NickName': {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 20
+                },
+                    'Email': {
+                    required: true,
+                    email: true,
+                    minlength: 5,
+                    maxlength: 100
+                },
+                    'Password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 25
+                },
+                    'RepeatPassword': {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 25,
+                    equalTo: "#password"
+                }
+            }
+        });
+    });
+})(jQuery)
+});//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  <form novalidate="novalidate" id="auth-sign-up" enctype="application/x-www-form-urlencoded" class="block-form block-form-default" action="http://online-racing.net/auth/sign-up" method="post">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group has-success has-feedback">
+                <label aria-required="true" for="FirstName" class="control-label required">Name</label>
+                <input name="FirstName" id="FirstName" maxlength="255" class="form-control" placeholder="Name" type="text">
+            <i class="fa fa-check fa-lg form-control-feedback"></i></div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group has-success has-feedback">
+                <label aria-required="true" for="LastName" class="control-label required">Surname</label>
+                <input name="LastName" id="LastName" maxlength="255" class="form-control" placeholder="Surname" type="text">
+            <i class="fa fa-check fa-lg form-control-feedback"></i></div>
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <label aria-required="true" for="CountryID" class="control-label required">Country</label>
+            <select name="CountryID" id="CountryID" class="form-control" placeholder="Country">
+                <option selected="selected" value="46">Argentina (Argentina)</option>
+                <option value="9">Australia (Australia)</option>
+                <option value="14">Belgien (Belgium)</option>
+                <option value="8">Brasil (Brazil)</option>
+                <option value="16">Canada (Canada)</option>
+                <option value="39">Danmark (Denmark)</option>
+                <option value="13">Deutschland (Germany)</option>
+                <option value="35">Eesti (Estonia)</option>
+                <option value="42">England (England)</option>
+                <option value="17">España (Spain)</option>
+                <option value="1">Europe (Europe)</option>
+                <option value="18">France (France)</option>
+                <option value="40">Ireland (Ireland)</option>
+                <option value="15">Italia (Italy)</option>
+                <option value="19">Latvija (Latvia)</option>
+                <option value="20">Lietuva (Lithuania)</option>
+                <option value="43">Magyarország (Hungary)</option>
+                <option value="10">Malaysia (Malaysia)</option>
+                <option value="11">Moldova (Moldova)</option>
+                <option value="22">Múnegu (Monaco)</option>
+                <option value="38">Nederland (Netherlands)</option>
+                <option value="37">Norge (Norway)</option>
+                <option value="12">Österreich (Austria)</option>
+                <option value="21">Polska (Poland)</option>
+                <option value="34">România (Romania)</option>
+                <option value="44">Singapura (Singapore)</option>
+                <option value="5">Suomi (Finland)</option>
+                <option value="36">Sverige (Sweden)</option>
+                <option value="32">Türkiye (Turkey)</option>
+                <option value="41">United kingdom (United kingdom)</option>
+                <option value="26">United States (United States)</option>
+                <option value="2">Беларусь (Belarus)</option>
+                <option value="33">България (Bulgaria)</option>
+                <option value="30">Монгол Улс (Mongolia)</option>
+                <option value="3">Россия (Russia)</option>
+                <option value="7">СССР (USSR)</option>
+                <option value="4">Україна (Ukraine)</option>
+                <option value="6">Қазақстан (Kazakhstan)</option>
+                <option value="45">الإمارات العربيّة المتّحدة (United arab emirates)</option>
+                <option value="25">البحرين‎‎‎‎ (Bahrain)</option>
+                <option value="27">भारत (India)</option>
+                <option value="31">საქართველო (Georgia)</option>
+                <option value="23">中华人民共和国 (China)</option>
+                <option value="24">日本 (Japan)</option>
+                <option value="28">조선 / 朝鮮 (Korea, North)</option>
+                <option value="29">한국 / 韓國 (Korea, South)</option>
+            </select>
+        </div>
+        <div class="form-group has-error has-feedback">
+            <label aria-required="true" for="NickName" class="control-label required">NickName</label>
+            <input aria-invalid="true" aria-required="true" name="NickName" id="NickName" maxlength="255" class="form-control" placeholder="NickName" type="text"><label for="NickName" class="error" id="NickName-error">This field is required.</label>
+        <i class="fa fa-exclamation fa-lg form-control-feedback"></i></div>
+        <div class="form-group has-error has-feedback">
+            <label aria-required="true" for="Email" class="control-label required">E-mail</label>
+            <input aria-required="true" name="Email" id="Email" maxlength="255" class="form-control" placeholder="E-mail" data-title="Enter your email. Example: example@mail.com." data-placement="bottom" type="text"><label for="Email" class="error" id="Email-error">This field is required.</label>
+        <i class="fa fa-exclamation fa-lg form-control-feedback"></i></div>
+        <div class="form-group has-error has-feedback">
+            <label aria-required="true" for="Password" class="control-label required">Password</label>
+            <input aria-required="true" name="Password" id="Password" value="" maxlength="40" class="form-control" placeholder="Password" data-title="Enter password for your account." data-placement="bottom" type="password"><label for="Password" class="error" id="Password-error">This field is required.</label>
+        <i class="fa fa-exclamation fa-lg form-control-feedback"></i></div>
+        <div class="form-group has-error has-feedback">
+            <label aria-required="true" for="RepeatPassword" class="control-label required">Repeat password</label>
+            <input aria-required="true" name="RepeatPassword" id="RepeatPassword" value="" maxlength="40" class="form-control" placeholder="Repeat password" data-title="Repeat entered above password." data-placement="bottom" type="password"><label for="RepeatPassword" class="error" id="RepeatPassword-error">This field is required.</label>
+        <i class="fa fa-exclamation fa-lg form-control-feedback"></i></div>
+    </div>
+    <div>
+        <div class="form-group">
+            <input name="Submit" id="Submit" value="Register" class="btn btn-danger btn-block btn-lg" type="submit">
+        </div>
+    </div>
+</form>
+  
+
+
+
+
+</body></html>

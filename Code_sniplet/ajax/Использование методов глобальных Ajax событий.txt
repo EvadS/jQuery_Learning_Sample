@@ -1,0 +1,60 @@
+<style type="text/css">
+  .ajaxinfo {
+    color: blue;
+    border: medium solid blue;
+    padding: 4px;
+    margin: auto;
+    margin-bottom: 2px;
+    width: 200px;
+    text-align: center;
+  }
+</style>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('<div class=ajaxinfo ><label for="globalevents">Events:<input type="checkbox"'
+      + 'id="globalevents" name="globalevents" checked></label></div>')
+      .insertAfter('h1');
+    $('<div id="info" class=ajaxinfo/>').text("Ready").insertAfter('h1');
+
+    $(document)
+      .ajaxStart(function () {
+        displayMessage("Ajax Start")
+      })
+      .ajaxSend(function (event, jqxhr, settings) {
+        displayMessage("Ajax Send: " + settings.url)
+      })
+      .ajaxSuccess(function (event, jqxhr, settings) {
+        displayMessage("Ajax Success: " + settings.url)
+      })
+      .ajaxError(function (event, jqxhr, settings, errorMsg) {
+        displayMessage("Ajax Error: " + settings.url)
+      })
+      .ajaxComplete(function (event, jqxhr, settings) {
+        displayMessage("Ajax Complete: " + settings.url)
+      })
+      .ajaxStop(function () {
+        displayMessage("Ajax Stop")
+      })
+
+    function displayMessage(msg) {
+      $('#info').queue(function () {
+        $(this).fadeTo("slow", 0).queue(function () {
+          $(this).text(msg).dequeue()
+        }).fadeTo("slow", 1).dequeue();
+      })
+    }
+
+    $('button').click(function (e) {
+      $('#row1, #row2').children().remove();
+      $.ajax("mydata.json", {
+        global: $('#globalevents:checked').length > 0,
+        success: function (data, status, jqxhr) {
+          var template = $('#flowerTmpl');
+          template.tmpl(data.slice(0, 3)).appendTo("#row1");
+          template.tmpl(data.slice(3)).appendTo("#row2");
+        }
+      });
+      e.preventDefault();
+    })
+  });
+</script>

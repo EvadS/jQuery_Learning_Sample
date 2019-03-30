@@ -1,0 +1,10 @@
+
+Почувствуй разницу между attr() и prop()
+http://anton.shevchuk.name/book/code/property.html
+События 
+http://anton.shevchuk.name/book/code/events.mouse.html
+
+Пример работы с очередью и без анимировании элементов
+http://anton.shevchuk.name/book/code/animate.queue.html
+Работа с формой
+http://anton.shevchuk.name/book/code/form.html

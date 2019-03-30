@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- http://getbootstrap.com/getting-started/ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="javascripts/data.js"></script>
+    <script type="text/javascript" src="javascripts/application.js"></script>
+
+   <style>
+  .custom-combobox {
+    position: relative;
+    display: inline-block;
+  }
+  .custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+  }
+  .ui-autocomplete {
+    position: absolute;
+}
+  .custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+  }
+  
+
+.ui-autocomplete { z-index:2147483647; }
+
+#container {
+    display: block; 
+    position:relative
+}
+  </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Студенты</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="starter-template">
+            <p><a class="btn btn-default" id="create-student">Добавить запись</a></p>
+            <div class="container page" id="page-add-student">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Новый студент</h1>
+                        <div class="alert alert-danger hidden"></div>
+                        <form onsubmit="addStudent(this, event)" id="add-student-form">
+                            <div class="form-group">
+                                <label for="last_name_add">Фамилия</label>
+                                <input type="text" class="form-control last_name" name="last_name_add" />
+                            </div>
+                            <div class="form-group">
+                                <label for="subject_name_add">Предмет</label>
+                                <!-- <input id="subject_name_add" type="text" class="form-control  subject_change" name="subject_name_add" />-->
+
+                                <select id="subject_name_add"  AutoComplete="off"  class="combobox form-control" name="subject_name_add">
+                                    <option value="">Select one...</option>
+									
+	
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exam_date_create">Дата сдачи</label>
+                                <input id="exam_date_create" type="text" class="form-control" name="exam_date_create" />
+                            </div>
+                            <div class="form-group">
+                                <label for="rate_add">Оценка</label>
+                                <div class="slider-rating"></div>
+                                <input type="text" id="rating_create" name="rate_add" class="form-control slider-rating-value" style="border: 0; color: #f6931f; font-weight: bold;" />
+
+                            </div>
+
+                            <input type="submit" class="btn btn-primary" value="Сохранить" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container page" id="page-edit-student">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Редактировать студента</h1>
+                    <div class="alert alert-danger hidden"></div>
+                    <form onsubmit="editStudent(this, event)" id="edit-student-form">
+                        <input type="hidden" name="id" />
+                        <div class="form-group">
+                            <label>Фамилия</label>
+                            <input type="text" class="form-control last_name" disabled name="lastNameEdit" />
+                        </div>
+                        <div class="form-group">
+                            <label>Предмет</label>
+                            <!--   <input type="text" autocomplete="on" class="form-control autocomplete subject_change " name="subjectEdit" id="subjectEdit" />-->
+                            <select id="subjectEdit" class="combobox form-control" name="subjectEdit">
+                                <option value="">Select one...</option>
+                            </select>
+
+                        </div>
+                        <div class="form-group">
+                            <label>Дата Сдачи</label>
+                            <input type="text" id="dateExamEdit" class="form-control" name="dateExamEdit" />
+                        </div>
+                        <div class="form-group">
+                            <label>Оценка</label>
+                            <!--<input type="number" class="form-control" id="rateEdit" name="rateEdit" />-->
+
+                            <div class="slider-rating" id="slider-rating_Edit"></div>
+                            <input type="text" id="rateEdit" name="rateEdit" class="form-control slider-rating-value" style="border: 0; color: #f6931f; font-weight: bold;" />
+
+                        </div>
+
+                        <input type="submit" class="btn btn-primary" value="Сохранить" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container page" id="page-students">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table" id="students-list">
+                        <thead>
+                            <tr>
+                                <th>Фамилия</th>
+                                <th>Предмет</th>
+                                <th>Дата сдачи</th>
+                                <th>Оценка</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

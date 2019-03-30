@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html slick-uniqueid="3"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="description" content="Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor.">
+    <meta name="keywords" content="online javascript editor, testing javascript online, online ide, online code editor, html, css, coffeescript, scss online editor">
+    <meta name="author" content="JSFiddle">
+    <meta name="copyright" content="share alike">
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+
+    
+      <meta name="robots" content="index, follow">
+      <meta name="googlebot" content="index, follow">
+    
+
+    
+
+    
+      <meta name="google-site-verification" content="9m4aWTtDLfQ1kJNm3NtNsCrtpsOx_QoOPQRJ7jAwup8">
+    
+
+    <!--meta name="viewport" content="width=device-width, maximum-scale=0.5" /-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+
+    
+      <script src="Edit%20fiddle%20-%20JSFiddle_files/prum.js" async=""></script><script src="Edit%20fiddle%20-%20JSFiddle_files/analytics.js" async=""></script><script type="text/javascript" src="Edit%20fiddle%20-%20JSFiddle_files/_dist-editor.js"></script>
+
+    
+    
+    <link rel="stylesheet" type="text/css" href="Edit%20fiddle%20-%20JSFiddle_files/_dist-editor.css">
+
+
+    
+      <link rel="stylesheet" type="text/css" href="Edit%20fiddle%20-%20JSFiddle_files/light.css">
+
+    
+
+    
+      <script type="text/javascript">
+        var fiddleOptions = {
+          example_id: "247951120",
+          exampleURL: "//jsfiddle.net/dark_diesel/gzmwtvh3/",
+          slug: "gzmwtvh3"
+        };
+        var csspath = "/css/",
+          jspath = "/js/",
+          imgpath = "/img/",
+          mediapath = "/mooshellmedia/",
+          codemirrorpath = "/codemirror/",
+          panel_html = 'html',
+          panel_css = 'css',
+          panel_js = 'javascript',
+          makefavouritepath = "/_make_favourite/",
+          example_server = "//jsfiddle.net",
+          username = "",
+          static_hash = "update_11_07_2016_1",
+          csrfToken = Cookie.read('csrftoken'),
+          editor_save = "",
+          mooshell,
+          preload_resources;
+
+        
+
+        Layout.skin = "light";// "light"
+        window.addEvent('domready', function() {
+          if (panel_js != 'javascript' && $('jslint')) {
+            $('jslint').getParent('li').hide();
+          }
+
+          $extend(Layout, new Events());
+          mooshell = new MooShellActions({
+            example_id: fiddleOptions.example_id,
+            exampleURL: fiddleOptions.exampleURL,
+            exampleSaveUrl: '/_save/',
+            // sendCallbackURL: '',
+            loadDependenciesURL: '/_get_dependencies/{lib_id}/',
+            loadLibraryVersionsURL: '/_get_library_versions/{group_id}/'
+          });
+          new MooShellEditor.JS(document.id('id_code_js'), {
+            language: panel_js
+          }); // add user defined parameters
+          new MooShellEditor.HTML(document.id('id_code_html'), {
+            language: panel_html
+          }); // add user defined parameters
+          new MooShellEditor.CSS(document.id('id_code_css'), {
+            language: panel_css
+          }); // add user defined parameters
+          Layout.render();
+
+          
+
+          // show editors and content when the last editor loads
+          // this will prevent flickering, plus looks nice
+          document.id('content').setStyle('opacity', 1);
+
+          // always keep this at the bottom
+          $$('select.panelChoice').each(function(sel) {
+            this.switchLanguage(sel);
+          }, mooshell);
+        });
+      </script>
+
+      
+    
+
+    
+      <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+  if (window.localStorage) {
+    ga('create', 'UA-366077-13', {
+      'storage': 'none',
+      'clientId': localStorage.getItem(GA_LOCAL_STORAGE_KEY)
+    });
+    ga(function(tracker) {
+      localStorage.setItem(GA_LOCAL_STORAGE_KEY, tracker.get('clientId'));
+    });
+    ga('send', 'pageview', '/[user]/[fiddle]/'); // where `url_structure` is for example `/[user]/[fiddle]/[revision]/embedded/js,css/`
+  }
+</script>
+
+      
+        <script>
+          var _prum = [['id', '526a363eabe53df827000000'], ['mark', 'firstbyte', (new Date()).getTime()]];
+          (function() {
+            var s = document.getElementsByTagName('script')[0]
+              , p = document.createElement('script');
+            p.async = 'async';
+            p.src = '//rum-static.pingdom.net/prum.min.js';
+            s.parentNode.insertBefore(p, s);
+          })();
+        </script>
+      
+
+      <!-- Hotjar Tracking Code for jsfiddle.net -->
+      <!-- <script>
+        (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:13981,hjsv:5};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+      </script> -->
+    
+
+    <script>
+      var HW_config = {
+        selector: ".changelog-badge",
+        account: "1xGMJQ"
+      };
+    </script>
+    <script async="" src="Edit%20fiddle%20-%20JSFiddle_files/widget.js"></script>
+
+    <link rel="icon" href="https://jsfiddle.net/favicon.png">
+    <link href="Edit%20fiddle%20-%20JSFiddle_files/css.css" rel="stylesheet" type="text/css">
+    <!-- <link href="//fonts.googleapis.com/css?family=Lato:400|Inconsolata" rel="stylesheet" type="text/css"> -->
+
+    <title>Edit fiddle - JSFiddle</title>
+  <script src="Edit%20fiddle%20-%20JSFiddle_files/C6AILKT.json" type="text/javascript" id="_carbonads_projs"></script><script src="Edit%20fiddle%20-%20JSFiddle_files/a_002.htm" type="text/javascript"></script></head>
+  <body>
+    <h1>Test your JavaScript, CSS, HTML or CoffeeScript online with JSFiddle code editor.</h1>
+    <h2>online javascript editor, testing javascript online, online ide, online code editor, html, css, coffeescript, scss online editor</h2>
+    <form method="post" id="show-result" target="result" action="//fiddle.jshell.net/_display/">
+      
+      
+      <div style="display:none"><input name="csrfmiddlewaretoken" value="rVcFVDPd6rgiG3PdjMN1M4xSA1JzXrlu" type="hidden"></div>
+      <div id="header">
+        <div id="branding">
+          <p id="name" class="changelog-badge"><a title="JSFiddle " href="https://jsfiddle.net/" id="home" class="drop-target">JSFiddle</a><span class="HW_visible" id="HW_badge_cont"><span class="HW_visible" id="HW_badge">4</span></span></p>
+        </div>
+        
+          <div id="actions">
+  <nav class="actionCont collapsed">
+    <div class="actionItem">
+      <a class="aiButton" id="run" title="Run (CTRL + Return)" href="#run"><i class="bts bt-play"></i>Run</a>
+    </div>
+
+    
+    
+
+    
+    
+      <div class="actionItem hidden">
+        <a class="aiButton" id="savenew" title="Save new Fiddle (CTRL + S)" href="#save"><i class="bts bt-pencil"></i>Save</a>
+      </div>
+      <div class="actionItem visible">
+        <a class="aiButton" id="update" title="Update (CTRL + S)" href="#update"><i class="bts bt-pencil"></i>Update</a>
+      </div>
+      <div class="actionItem visible">
+        <a class="aiButton" id="fork" title="Fork into a new Fiddle" href="#fork"><i class="bts bt-fork"></i>Fork</a>
+      </div>
+    
+
+    
+
+    <div class="actionItem">
+      <a class="aiButton" id="tidy" title="Tidy messy code" href="#tidy"><i class="bts bt-align-left"></i>Tidy</a>
+    </div>
+    <!-- <div class="actionItem">
+      <a class="aiButton" id="showjscode" title="Show JavaScript code" href="#showjs"><i class="bts bt-code"></i>Show JS</a>
+    </div -->
+    <div class="actionItem">
+      <a class="aiButton" id="collaborate" title="Collaborate on code" href="#collaborate"><i class="bts bt-commenting"></i>Collaborate</a>
+    </div>
+  </nav>
+
+  
+  
+
+  <ul class="actionCont dropdown">
+    <li class="actionItem visible">
+      <a class="aiButton dropdownTrigger" id="share" title="Embed this Fiddle" href="#embed">Embed<i class="bts bt-angle-down rightIcon"></i></a>
+      <div class="dropdownCont center">
+        <div class="dcWrapper embed">
+
+          <div id="creator">
+            <section>
+              <h3>Tabs:</h3>
+              <div class="inlineFields">
+                <label class="inputCont_checkbox checkboxCont">
+                  <input name="tabs" value="js" checked="checked" type="checkbox">
+                  <span class="checkbox"><i class="bts bt-check"></i></span> JavaScript
+                </label>
+                <label class="inputCont_checkbox checkboxCont">
+                  <input name="tabs" value="html" checked="checked" type="checkbox">
+                  <span class="checkbox"><i class="bts bt-check"></i></span> HTML
+                </label>
+                <label class="inputCont_checkbox checkboxCont">
+                  <input name="tabs" value="css" checked="checked" type="checkbox">
+                  <span class="checkbox"><i class="bts bt-check"></i></span> CSS
+                </label>
+                <label class="inputCont_checkbox checkboxCont">
+                  <input name="tabs" value="result" checked="checked" type="checkbox">
+                  <span class="checkbox"><i class="bts bt-check"></i></span> Result
+                </label>
+              </div> <!-- /inlineFields -->
+            </section>
+
+            <section class="noborder">
+              <h3>Visual:</h3>
+              <div class="inlineFields">
+                <label class="inputCont_checkbox checkboxCont">
+                  <input name="skin" value="light" checked="checked" type="radio">
+                  <span class="radio"></span> Light
+                </label>
+                <label class="inputCont_checkbox checkboxCont">
+                  <input name="skin" value="dark" type="radio">
+                  <span class="radio"></span> Dark
+                </label>
+              </div> <!-- /inlineFields -->
+              <label class="inputCont_text">
+                <input name="accentColor" maxlength="6" placeholder="Accent color" type="text">
+              </label>
+              <label class="inputCont_text">
+                <input name="fontColor" maxlength="6" placeholder="Font color" type="text">
+              </label>
+              <label class="inputCont_text">
+                <input name="menuColor" maxlength="6" placeholder="Menu background" type="text">
+              </label>
+              <label class="inputCont_text">
+                <input name="bodyColor" maxlength="6" placeholder="Code background" type="text">
+              </label>
+            </section>
+
+            <section class="noborder">
+              <h3>Embed code <a href="#" class="codeTypeToggle">Prefer iframe?</a>:</h3>
+              <div class="embedCodeWrap">
+<textarea class="embedCode" id="share_embedded_dropdown" data-view="embed" data-pattern-value="&lt;script async src=&quot;{embedSrc}&quot;&gt;&lt;/script&gt;">&lt;script async src="{embedSrc}"&gt;&lt;/script&gt;
+</textarea>
+              </div> <!-- /embedCodeWrap -->
+
+              <div class="embedCodeWrap hidden">
+<textarea class="embedCode" data-view="embedded" data-pattern-value="&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; src=&quot;{embedSrc}&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;">&lt;iframe width="100%" height="300" src="{embedSrc}" allowfullscreen="allowfullscreen" frameborder="0"&gt;&lt;/iframe&gt;
+</textarea>
+                <p><strong>No autoresizing</strong> to fit the code</p>
+                <p><strong>Render blocking</strong> of the parent page</p>
+              </div> <!-- /embedCodeWrap -->
+            </section>
+          </div> <!-- /creator -->
+
+          <div id="preview"></div> <!-- /preview -->
+
+        </div> <!-- /dcWrapper -->
+      </div> <!-- /dropdownCont -->
+    </li> <!-- /actionItem -->
+  </ul> <!-- /actionCont -->
+
+
+  
+<ul class="actionCont dropdown right">
+  <li class="actionItem hidden draftTriggerCont">
+    <a class="aiButton dropdownTrigger applyDraft" href="#">
+      <i class="bts bt-flag"></i>Your fiddle has an unsaved draft
+    </a>
+    <div class="dropdownCont">
+      <div class="dcWrapper diffCont">
+        <h4>Diff between the <strong>saved</strong> and <strong>locally drafted</strong> fiddle:</h4>
+        <div class="diffPanels">
+          <div class="diffWrap" id="diff-html"></div>
+          <div class="diffWrap" id="diff-js"></div>
+          <div class="diffWrap" id="diff-css"></div>
+        </div><!-- /diffCont -->
+        <p><a class="apply" href="#" id="apply-draft">Apply local draft version</a> or <a href="#" id="discard-draft">discard it</a></p>
+      </div><!-- /actionItem -->
+    </div><!-- /dcWrapper -->
+  </li> <!-- /actionItem -->
+
+  <li class="actionItem">
+    <a class="aiButton dropdownTrigger" href="#editor-options">
+      <i class="bts bt-gear"></i>Settings
+      <i class="bts bt-angle-down rightIcon"></i>
+    </a>
+    <div class="dropdownCont">
+      <div class="dcWrapper" id="editor-options">
+        <p>
+          <label class="checkboxCont">
+            <input name="autoCloseTags" checked="checked" type="checkbox">
+            <span class="checkbox"><i class="bts bt-check"></i></span>
+            Auto-close HTML tags
+          </label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input name="lineNumbers" checked="checked" type="checkbox">
+            <span class="checkbox"><i class="bts bt-check"></i></span>
+            Show line numbers
+          </label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input name="lineWrapping" checked="checked" type="checkbox">
+            <span class="checkbox"><i class="bts bt-check"></i></span>
+            Enable line wrapping
+          </label>
+        </p>
+        <p>
+          <label class="checkboxCont">
+            <input name="indentWithTabs" type="checkbox">
+            <span class="checkbox"><i class="bts bt-check"></i></span>
+            Indent with tabs
+          </label>
+        </p>
+
+        <div class="selectPair">
+          <span class="label">Indent size:</span>
+          <div class="selectCont">
+            <select name="indentUnit">
+              <option selected="selected" value="2">2 spaces</option>
+              <option value="3">3 spaces</option>
+              <option value="4">4 spaces</option>
+            </select>
+            <label><i class="bts bt-angle-down"></i></label>
+          </div> <!-- /selectCont -->
+        </div> <!-- /selectPair -->
+
+        <div class="selectPair">
+          <span class="label">Key map:</span>
+          <div class="selectCont">
+            <select name="keyMap">
+              <option selected="selected" value="default">Default</option>
+              <option value="sublime">Sublime Text</option>
+              <option value="vim">VIM</option>
+              <option value="emacs">EMACS</option>
+            </select>
+            <label><i class="bts bt-angle-down"></i></label>
+          </div> <!-- /selectCont -->
+        </div> <!-- /selectPair -->
+      </div>
+    </div>
+  </li> <!-- /actionItem -->
+  
+    <li class="actionItem noIcon"><a class="aiButton" id="login" title="Login" href="https://jsfiddle.net/user/login/"><i class="bts bt-smile"></i>Sign in</a></li>
+  
+</ul>
+
+</div>
+
+        
+        <div id="progressbar"><div class="pb"></div></div>
+      </div>
+
+      
+        <div id="sidebar">
+          
+  
+  <h3 id="author_toggler" class="toggler active">Fiddle Author</h3>
+  <div class="element">
+    <div style="padding-top: 0px; border-top: medium none; padding-bottom: 0px; border-bottom: medium none; overflow: hidden; opacity: 1; height: auto;" class="elementBody">
+      <div class="ebCont">
+        <div class="avatar">
+          <img src="Edit%20fiddle%20-%20JSFiddle_files/a.jpg" height="40" width="40">
+          <a title="See public fiddles" href="https://jsfiddle.net/user/dark_diesel/fiddles/">
+            
+              Igor Peshkov
+            
+          </a>
+          
+        </div> <!-- /avatar -->
+
+        <ul class="userDetails">
+          
+            <li><i class="bts bt-map-marker"></i>Belarus</li>
+          
+          
+          
+        </ul> <!-- /userDetails -->
+      </div> <!-- /ebCont -->
+    </div> <!-- /elementBody -->
+  </div> <!-- /element -->
+
+
+          <h3 id="about_toggler" class="toggler">Fiddle Meta</h3>
+<div class="element">
+  <div style="padding-top: 0px; border-top: medium none; padding-bottom: 0px; border-bottom: medium none; overflow: hidden; opacity: 0; height: 0px;" class="elementBody">
+    <div class="ebCont">
+      <p>
+        <label>
+          <input id="id_title" name="title" maxlength="255" placeholder="Untitled fiddle" type="text">
+        </label>
+      </p>
+      <p>
+        <label>
+          <textarea id="id_description" rows="10" cols="40" name="description" placeholder="No description"></textarea>
+        </label>
+      </p>
+      <p class="metaInfo">Add title to make the fiddle public.</p>
+    </div>
+  </div>
+</div>
+
+          
+
+<h3 class="toggler filled" id="resources_toggler">
+  External Resources <em>5</em>
+</h3>
+
+
+<div class="element" id="resources_element">
+  <div style="padding-top: 0px; border-top: medium none; padding-bottom: 0px; border-bottom: medium none; overflow: hidden; opacity: 0; height: 0px;" class="elementBody">
+    <div class="ebCont">
+      <div id="external-resources-form">
+        <input id="external_resource" placeholder="JavaScript/CSS URI" type="text">
+        <a id="add_external_resource" class="submit" href="#" title="Add resource"><i class="bts bt-plus-circle"></i></a>
+      </div>
+      <input value="874186,1299010,1215148,1215296,1215212" id="external_resources_id" name="add_external_resources" type="hidden">
+
+      <ul id="external_resources_list">
+      <script type="text/javascript">var resources = [];</script>
+      
+        <li id="external_resource_874186">
+          <a class="filename" target="_blank" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js" title="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js">
+            jquery.validate.min.js
+          </a>
+          <a onclick="remove_resource(874186)" class="remove">
+            <i class="bts bt-minus-circle"></i>
+          </a>
+        </li>
+        <script type="text/javascript">resources.push(874186)</script>
+      
+        <li id="external_resource_1299010">
+          <a class="filename" target="_blank" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" title="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+            font-awesome.min.css
+          </a>
+          <a onclick="remove_resource(1299010)" class="remove">
+            <i class="bts bt-minus-circle"></i>
+          </a>
+        </li>
+        <script type="text/javascript">resources.push(1299010)</script>
+      
+        <li id="external_resource_1215148">
+          <a class="filename" target="_blank" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" title="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            bootstrap.min.css
+          </a>
+          <a onclick="remove_resource(1215148)" class="remove">
+            <i class="bts bt-minus-circle"></i>
+          </a>
+        </li>
+        <script type="text/javascript">resources.push(1215148)</script>
+      
+        <li id="external_resource_1215296">
+          <a class="filename" target="_blank" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" title="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+            bootstrap-theme.min.css
+          </a>
+          <a onclick="remove_resource(1215296)" class="remove">
+            <i class="bts bt-minus-circle"></i>
+          </a>
+        </li>
+        <script type="text/javascript">resources.push(1215296)</script>
+      
+        <li id="external_resource_1215212">
+          <a class="filename" target="_blank" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" title="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+            bootstrap.min.js
+          </a>
+          <a onclick="remove_resource(1215212)" class="remove">
+            <i class="bts bt-minus-circle"></i>
+          </a>
+        </li>
+        <script type="text/javascript">resources.push(1215212)</script>
+      
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var default_text = 'JavaScript/CSS URL',
+      add_external_resource_url = "/_add_external_resource/";
+</script>
+
+          <h3 class="toggler">AJAX Requests</h3>
+<div class="element">
+  <div style="padding-top: 0px; border-top: medium none; padding-bottom: 0px; border-bottom: medium none; overflow: hidden; opacity: 0; height: 0px;" class="elementBody">
+    <div class="ebCont">
+
+      <p><code>/echo</code> simulates AJAX calls:<br>
+        JSON: <code>/echo/json/</code><br>
+        JSONP: <code>//jsfiddle.net/echo/jsonp/</code><br>
+        HTML: <code>/echo/html/</code><br>
+        XML: <code>/echo/xml/</code>
+      </p>
+      <p>See <a href="http://doc.jsfiddle.net/use/echo.html" target="_new">docs</a> for more info.</p>
+    </div>
+  </div>
+</div>
+
+          
+          <h3 class="toggler">Legal, Credits and Links</h3>
+<div class="element">
+  <div style="padding-top: 0px; border-top: medium none; padding-bottom: 0px; border-bottom: medium none; overflow: hidden; opacity: 0; height: 0px;" class="elementBody">
+    <div class="ebCont">
+      <p class="maintainers">Created and maintained by <a title="Piotr's twitter" href="http://twitter.com/zalun" target="_blank">Piotr</a> and <a title="UX and UI Designer" href="http://krawczyk.io/" target="_blank">Oskar</a>.</p>
+      <p>Hosting by <a href="https://m.do.co/c/52e7a0ad196d" target="_credits"><strong>DigitalOcean</strong></a></p>
+      <p><strong>License</strong></p>
+      <p>All code belongs to the poster and no license is enforced.</p>
+      <p>JSFiddle or its authors are not responsible or liable for any loss or damage of any kind during the usage of provided code.</p>
+      <p><strong>Links</strong></p>
+      <p>
+        <a href="http://doc.jsfiddle.net/" target="_blank">Docs</a><br>
+      </p>
+    </div>
+  </div>
+</div>
+
+<style media="screen">
+  .maintainers {
+    position: absolute;
+    top: -900em;
+    left: -900em;
+  }
+</style>
+
+
+          <div id="roadmap">
+            <a href="https://trello.com/b/LakLkQBW/jsfiddle-roadmap" target="_blank">JSFiddle Roadmap <span>suggest and vote for features</span></a>
+          </div>
+
+          <div class="twitterCont">
+            <script async="" type="text/javascript" src="Edit%20fiddle%20-%20JSFiddle_files/carbon.js" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://headwayapp.co/" class="carbon-img" target="_blank"><img src="Edit%20fiddle%20-%20JSFiddle_files/98537558c60ba3d8989a55f7a7f334bf.png" alt="" style="max-width:130px;" border="0" height="100" width="130"></a><a href="https://headwayapp.co/" class="carbon-text" target="_blank">Headway – Changelog for your webapp.</a></span></span></div>
+          </div>
+          <div id="keep-us-running">
+            <p>Like JSFiddle?</p>
+            <p>Keep us running by whitelisting JSFiddle in your ad blocker.</p>
+            <p>We're serving quality, tech-related ads only.</p>
+            <p>Thank you!</p>
+          </div>
+          <script type="text/javascript">
+            window.onload = function(){
+              setTimeout(function(){
+                var info = document.getElementById("keep-us-running");
+                var ads = document.getElementById("carbonads");
+
+                if (ads === null){
+                  info.className = "show";
+                  info.addEvent("click", function(){
+                    info.className = "";
+                  });
+                }
+              }, 2000)
+            }
+          </script>
+          
+          
+        </div>
+        <div style="height: 905px; opacity: 1;" id="content">
+          
+          
+
+
+<input name="version" value="43" id="id_version" type="hidden">
+<input id="id_slug" name="slug" value="gzmwtvh3" type="hidden">
+
+<fieldset class="column left">
+  <div style="height: 46.4981%;" class="window top" id="panel_html" data-panel_type="html">
+    <textarea style="display: none;" id="id_code_html" rows="10" cols="40" name="code_html">&lt;form
+ id="auth-sign-up" enctype="application/x-www-form-urlencoded" 
+class="block-form block-form-default" 
+action="http://online-racing.net/auth/sign-up" method="post"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="FirstName" class="control-label 
+required"&gt;Name&lt;/label&gt;
+                &lt;input type="text" name="FirstName" id="FirstName" 
+value="" maxLength="255" class="form-control" placeholder="Name" /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="LastName" class="control-label 
+required"&gt;Surname&lt;/label&gt;
+                &lt;input type="text" name="LastName" id="LastName" 
+value="" maxLength="255" class="form-control" placeholder="Surname" 
+/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label for="CountryID" class="control-label 
+required"&gt;Country&lt;/label&gt;
+            &lt;select name="CountryID" id="CountryID" 
+class="form-control" placeholder="Country"&gt;
+                &lt;option value="46"&gt;Argentina 
+(Argentina)&lt;/option&gt;
+                &lt;option value="9"&gt;Australia 
+(Australia)&lt;/option&gt;
+                &lt;option value="14"&gt;Belgien 
+(Belgium)&lt;/option&gt;
+                &lt;option value="8"&gt;Brasil (Brazil)&lt;/option&gt;
+                &lt;option value="16"&gt;Canada (Canada)&lt;/option&gt;
+                &lt;option value="39"&gt;Danmark 
+(Denmark)&lt;/option&gt;
+                &lt;option value="13"&gt;Deutschland 
+(Germany)&lt;/option&gt;
+                &lt;option value="35"&gt;Eesti (Estonia)&lt;/option&gt;
+                &lt;option value="42"&gt;England 
+(England)&lt;/option&gt;
+                &lt;option value="17"&gt;España (Spain)&lt;/option&gt;
+                &lt;option value="1"&gt;Europe (Europe)&lt;/option&gt;
+                &lt;option value="18"&gt;France (France)&lt;/option&gt;
+                &lt;option value="40"&gt;Ireland 
+(Ireland)&lt;/option&gt;
+                &lt;option value="15"&gt;Italia (Italy)&lt;/option&gt;
+                &lt;option value="19"&gt;Latvija (Latvia)&lt;/option&gt;
+                &lt;option value="20"&gt;Lietuva 
+(Lithuania)&lt;/option&gt;
+                &lt;option value="43"&gt;Magyarország 
+(Hungary)&lt;/option&gt;
+                &lt;option value="10"&gt;Malaysia 
+(Malaysia)&lt;/option&gt;
+                &lt;option value="11"&gt;Moldova 
+(Moldova)&lt;/option&gt;
+                &lt;option value="22"&gt;Múnegu (Monaco)&lt;/option&gt;
+                &lt;option value="38"&gt;Nederland 
+(Netherlands)&lt;/option&gt;
+                &lt;option value="37"&gt;Norge (Norway)&lt;/option&gt;
+                &lt;option value="12"&gt;Österreich 
+(Austria)&lt;/option&gt;
+                &lt;option value="21"&gt;Polska (Poland)&lt;/option&gt;
+                &lt;option value="34"&gt;România 
+(Romania)&lt;/option&gt;
+                &lt;option value="44"&gt;Singapura 
+(Singapore)&lt;/option&gt;
+                &lt;option value="5"&gt;Suomi (Finland)&lt;/option&gt;
+                &lt;option value="36"&gt;Sverige (Sweden)&lt;/option&gt;
+                &lt;option value="32"&gt;Türkiye (Turkey)&lt;/option&gt;
+                &lt;option value="41"&gt;United kingdom (United 
+kingdom)&lt;/option&gt;
+                &lt;option value="26"&gt;United States (United 
+States)&lt;/option&gt;
+                &lt;option value="2"&gt;Беларусь 
+(Belarus)&lt;/option&gt;
+                &lt;option value="33"&gt;България 
+(Bulgaria)&lt;/option&gt;
+                &lt;option value="30"&gt;Монгол Улс 
+(Mongolia)&lt;/option&gt;
+                &lt;option value="3"&gt;Россия (Russia)&lt;/option&gt;
+                &lt;option value="7"&gt;СССР (USSR)&lt;/option&gt;
+                &lt;option value="4"&gt;Україна (Ukraine)&lt;/option&gt;
+                &lt;option value="6"&gt;Қазақстан 
+(Kazakhstan)&lt;/option&gt;
+                &lt;option value="45"&gt;الإمارات العربيّة المتّحدة 
+(United arab emirates)&lt;/option&gt;
+                &lt;option value="25"&gt;البحرين‎‎‎‎ 
+(Bahrain)&lt;/option&gt;
+                &lt;option value="27"&gt;भारत (India)&lt;/option&gt;
+                &lt;option value="31"&gt;საქართველო 
+(Georgia)&lt;/option&gt;
+                &lt;option value="23"&gt;中华人民共和国 (China)&lt;/option&gt;
+                &lt;option value="24"&gt;日本 (Japan)&lt;/option&gt;
+                &lt;option value="28"&gt;조선 / 朝鮮 (Korea, 
+North)&lt;/option&gt;
+                &lt;option value="29"&gt;한국 / 韓國 (Korea, 
+South)&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label for="NickName" class="control-label 
+required"&gt;NickName&lt;/label&gt;
+            &lt;input type="text" name="NickName" id="NickName" value=""
+ maxLength="255" class="form-control" placeholder="NickName" /&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label for="Email" class="control-label 
+required"&gt;E-mail&lt;/label&gt;
+            &lt;input type="text" name="Email" id="Email" value="" 
+maxLength="255" class="form-control" placeholder="E-mail" 
+data-title="Enter your email. Example: example@mail.com." 
+data-placement="bottom" /&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label for="Password" class="control-label 
+required"&gt;Password&lt;/label&gt;
+            &lt;input type="password" name="Password" id="Password" 
+value="" maxLength="40" class="form-control" placeholder="Password" 
+data-title="Enter password for your account." data-placement="bottom" 
+/&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label for="RepeatPassword" class="control-label 
+required"&gt;Repeat password&lt;/label&gt;
+            &lt;input type="password" name="RepeatPassword" 
+id="RepeatPassword" value="" maxLength="40" class="form-control" 
+placeholder="Repeat password" data-title="Repeat entered above 
+password." data-placement="bottom" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;input type="submit" name="Submit" id="Submit" 
+value="Register" class="btn btn-danger btn-block btn-lg" /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</textarea>
+    <a href="#" class="windowLabel" data-panel="html">
+      <span class="label">HTML</span><i class="bts bt-gear"></i>
+    </a>
+  <div class="CodeMirror cm-s-default CodeMirror-wrap CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 109px;"><textarea tabindex="0" spellcheck="false" autocapitalize="off" autocorrect="off" style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: medium none;" wrap="off"></textarea></div><div style="display: block; bottom: 0px;" cm-not-content="true" class="CodeMirror-vscrollbar"><div style="min-width: 1px; height: 1988px;"></div></div><div cm-not-content="true" class="CodeMirror-hscrollbar"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div cm-not-content="true" class="CodeMirror-scrollbar-filler"></div><div cm-not-content="true" class="CodeMirror-gutter-filler"></div><div draggable="true" tabindex="-1" class="CodeMirror-scroll"><div style="margin-left: 35px; margin-bottom: -17px; border-right-width: 13px; min-height: 1988px; padding-right: 17px; padding-bottom: 0px;" class="CodeMirror-sizer"><div style="position: relative; top: 588px;"><div class="CodeMirror-lines"><div style="position: relative; outline: medium none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line"><span>    <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div style="" class="CodeMirror-cursors"><div style="left: 74px; top: -254.8px; height: 19.6px;" class="CodeMirror-cursor">&nbsp;</div></div><div style="" class="CodeMirror-code"><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">28</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"42"</span><span class="cm-tag cm-bracket">&gt;</span>England (England)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">29</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"17"</span><span class="cm-tag cm-bracket">&gt;</span>España (Spain)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">30</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"1"</span><span class="cm-tag cm-bracket">&gt;</span>Europe (Europe)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">31</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"18"</span><span class="cm-tag cm-bracket">&gt;</span>France (France)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">32</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"40"</span><span class="cm-tag cm-bracket">&gt;</span>Ireland (Ireland)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">33</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"15"</span><span class="cm-tag cm-bracket">&gt;</span>Italia (Italy)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">34</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"19"</span><span class="cm-tag cm-bracket">&gt;</span>Latvija (Latvia)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">35</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"20"</span><span class="cm-tag cm-bracket">&gt;</span>Lietuva (Lithuania)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">36</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"43"</span><span class="cm-tag cm-bracket">&gt;</span>Magyarország (Hungary)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">37</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"10"</span><span class="cm-tag cm-bracket">&gt;</span>Malaysia (Malaysia)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">38</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"11"</span><span class="cm-tag cm-bracket">&gt;</span>Moldova (Moldova)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">39</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"22"</span><span class="cm-tag cm-bracket">&gt;</span>Múnegu (Monaco)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">40</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"38"</span><span class="cm-tag cm-bracket">&gt;</span>Nederland (Netherlands)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">41</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"37"</span><span class="cm-tag cm-bracket">&gt;</span>Norge (Norway)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">42</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"12"</span><span class="cm-tag cm-bracket">&gt;</span>Österreich (Austria)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">43</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"21"</span><span class="cm-tag cm-bracket">&gt;</span>Polska (Poland)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">44</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"34"</span><span class="cm-tag cm-bracket">&gt;</span>România (Romania)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">45</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"44"</span><span class="cm-tag cm-bracket">&gt;</span>Singapura (Singapore)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">46</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"5"</span><span class="cm-tag cm-bracket">&gt;</span>Suomi (Finland)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">47</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"36"</span><span class="cm-tag cm-bracket">&gt;</span>Sverige (Sweden)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">48</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"32"</span><span class="cm-tag cm-bracket">&gt;</span>Türkiye (Turkey)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">49</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"41"</span><span class="cm-tag cm-bracket">&gt;</span>United kingdom (United kingdom)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">50</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"26"</span><span class="cm-tag cm-bracket">&gt;</span>United States (United States)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">51</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"2"</span><span class="cm-tag cm-bracket">&gt;</span>Беларусь (Belarus)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">52</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"33"</span><span class="cm-tag cm-bracket">&gt;</span>България (Bulgaria)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">53</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"30"</span><span class="cm-tag cm-bracket">&gt;</span>Монгол Улс (Mongolia)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">54</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"3"</span><span class="cm-tag cm-bracket">&gt;</span>Россия (Russia)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">55</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"7"</span><span class="cm-tag cm-bracket">&gt;</span>СССР (USSR)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">56</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"4"</span><span class="cm-tag cm-bracket">&gt;</span>Україна (Ukraine)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">57</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"6"</span><span class="cm-tag cm-bracket">&gt;</span>Қазақстан (Kazakhstan)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">58</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"45"</span><span class="cm-tag cm-bracket">&gt;</span>الإمارات العربيّة المتّحدة (United arab emirates)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">59</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"25"</span><span class="cm-tag cm-bracket">&gt;</span>البحرين<span cm-text="‎" aria-label="\u200e" title="\u200e" class="cm-invalidchar">•</span><span cm-text="‎" aria-label="\u200e" title="\u200e" class="cm-invalidchar">•</span><span cm-text="‎" aria-label="\u200e" title="\u200e" class="cm-invalidchar">•</span><span cm-text="‎" aria-label="\u200e" title="\u200e" class="cm-invalidchar">•</span> (Bahrain)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">60</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"27"</span><span class="cm-tag cm-bracket">&gt;</span>भारत (India)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">61</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"31"</span><span class="cm-tag cm-bracket">&gt;</span>საქართველო (Georgia)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">62</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"23"</span><span class="cm-tag cm-bracket">&gt;</span>中华人民共和国 (China)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">63</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"24"</span><span class="cm-tag cm-bracket">&gt;</span>日本 (Japan)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">64</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"28"</span><span class="cm-tag cm-bracket">&gt;</span>조선 / 朝鮮 (Korea, North)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">65</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">option</span> <span class="cm-attribute">value</span>=<span class="cm-string">"29"</span><span class="cm-tag cm-bracket">&gt;</span>한국 / 韓國 (Korea, South)<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">option</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">66</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">select</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">67</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">68</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">69</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"NickName"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label required"</span><span class="cm-tag cm-bracket">&gt;</span>NickName<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">70</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"NickName"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"NickName"</span> <span class="cm-attribute">value</span>=<span class="cm-string">""</span> <span class="cm-attribute">maxLength</span>=<span class="cm-string">"255"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"NickName"</span> <span class="cm-tag cm-bracket">/&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">71</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">72</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">73</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"Email"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label required"</span><span class="cm-tag cm-bracket">&gt;</span>E-mail<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">74</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"text"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"Email"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Email"</span> <span class="cm-attribute">value</span>=<span class="cm-string">""</span> <span class="cm-attribute">maxLength</span>=<span class="cm-string">"255"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"E-mail"</span> <span class="cm-attribute">data-title</span>=<span class="cm-string">"Enter your email. Example: example@mail.com."</span> <span class="cm-attribute">data-placement</span>=<span class="cm-string">"bottom"</span> <span class="cm-tag cm-bracket">/&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">75</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">76</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-group"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">77</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">label</span> <span class="cm-attribute">for</span>=<span class="cm-string">"Password"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"control-label required"</span><span class="cm-tag cm-bracket">&gt;</span>Password<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">label</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">78</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">input</span> <span class="cm-attribute">type</span>=<span class="cm-string">"password"</span> <span class="cm-attribute">name</span>=<span class="cm-string">"Password"</span> <span class="cm-attribute">id</span>=<span class="cm-string">"Password"</span> <span class="cm-attribute">value</span>=<span class="cm-string">""</span> <span class="cm-attribute">maxLength</span>=<span class="cm-string">"40"</span> <span class="cm-attribute">class</span>=<span class="cm-string">"form-control"</span> <span class="cm-attribute">placeholder</span>=<span class="cm-string">"Password"</span> <span class="cm-attribute">data-title</span>=<span class="cm-string">"Enter password for your account."</span> <span class="cm-attribute">data-placement</span>=<span class="cm-string">"bottom"</span> <span class="cm-tag cm-bracket">/&gt;</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">79</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; top: 1988px;"></div><div style="height: 2001px;" class="CodeMirror-gutters"><div style="width: 34px;" class="CodeMirror-gutter CodeMirror-linenumbers"></div></div></div></div></div>
+  <div style="top: 422px;" class="handler handler_horizontal"></div>
+  <div style="height: 53.5019%;" class="window bottom" id="panel_js" data-panel_type="javascript">
+    <textarea style="display: none;" id="id_code_js" rows="10" cols="40" name="code_js">(function
+ ($) {
+    $(document).ready(function () {
+        jQuery.validator.setDefaults({
+            highlight: function (element, errorClass, validClass) {
+                if (element.type === "radio") {
+                    
+this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+
+                } else {
+                    
+$(element).closest('.form-group').removeClass('has-success 
+has-feedback').addClass('has-error has-feedback');
+                    
+$(element).closest('.form-group').find('i.fa').remove();
+                    $(element).closest('.form-group').append('&lt;i 
+class="fa fa-exclamation fa-lg form-control-feedback"&gt;&lt;/i&gt;');
+                }
+            },
+            unhighlight: function (element, errorClass, validClass) {
+                if (element.type === "radio") {
+                    
+this.findByName(element.name).removeClass(errorClass).addClass(validClass);
+
+                } else {
+                    
+$(element).closest('.form-group').removeClass('has-error 
+has-feedback').addClass('has-success has-feedback');
+                    
+$(element).closest('.form-group').find('i.fa').remove();
+                    $(element).closest('.form-group').append('&lt;i 
+class="fa fa-check fa-lg form-control-feedback"&gt;&lt;/i&gt;');
+                }
+            }
+        });
+
+        $("form").validate({
+            rules: {
+                'NickName': {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 20
+                },
+                    'Email': {
+                    required: true,
+                    email: true,
+                    minlength: 5,
+                    maxlength: 100
+                },
+                    'Password': {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 25
+                },
+                    'RepeatPassword': {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 25,
+                    equalTo: "#password"
+                }
+            }
+        });
+    });
+})(jQuery)</textarea>
+    <a href="#" class="windowLabel" data-panel="js">
+      <span class="label">JavaScript</span><i class="bts bt-gear"></i>
+    </a>
+  <div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 39px;"><textarea tabindex="0" spellcheck="false" autocapitalize="off" autocorrect="off" style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: medium none;" wrap="off"></textarea></div><div style="display: block; bottom: 0px; width: 18px; pointer-events: none;" cm-not-content="true" class="CodeMirror-vscrollbar"><div style="min-width: 1px; height: 1086px;"></div></div><div style="height: 18px; pointer-events: none;" cm-not-content="true" class="CodeMirror-hscrollbar"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div cm-not-content="true" class="CodeMirror-scrollbar-filler"></div><div cm-not-content="true" class="CodeMirror-gutter-filler"></div><div draggable="true" tabindex="-1" class="CodeMirror-scroll"><div style="margin-left: 35px; margin-bottom: -17px; border-right-width: 13px; min-height: 1086px; padding-right: 17px; padding-bottom: 0px;" class="CodeMirror-sizer"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: medium none;"><div class="CodeMirror-measure"><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>51</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div style="" class="CodeMirror-cursors"><div style="left: 4px; top: 0px; height: 19.6px;" class="CodeMirror-cursor">&nbsp;</div></div><div style="" class="CodeMirror-code"><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">1</div></div><pre class=" CodeMirror-line "><span>(<span class="cm-keyword">function</span> (<span class="cm-def">$</span>) {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">2</div></div><pre class=" CodeMirror-line "><span>    <span class="cm-variable-2">$</span>(<span class="cm-variable">document</span>).<span class="cm-property">ready</span>(<span class="cm-keyword">function</span> () {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">3</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-variable">jQuery</span>.<span class="cm-property">validator</span>.<span class="cm-property">setDefaults</span>({</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">4</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-property">highlight</span>: <span class="cm-keyword">function</span> (<span class="cm-def">element</span>, <span class="cm-def">errorClass</span>, <span class="cm-def">validClass</span>) {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">5</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-keyword">if</span> (<span class="cm-variable-2">element</span>.<span class="cm-property">type</span> <span class="cm-operator">===</span> <span class="cm-string">"radio"</span>) {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">6</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-keyword">this</span>.<span class="cm-property">findByName</span>(<span class="cm-variable-2">element</span>.<span class="cm-property">name</span>).<span class="cm-property">addClass</span>(<span class="cm-variable-2">errorClass</span>).<span class="cm-property">removeClass</span>(<span class="cm-variable-2">validClass</span>);</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">7</div></div><pre class=" CodeMirror-line "><span>                } <span class="cm-keyword">else</span> {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">8</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-variable-2">$</span>(<span class="cm-variable-2">element</span>).<span class="cm-property">closest</span>(<span class="cm-string">'.form-group'</span>).<span class="cm-property">removeClass</span>(<span class="cm-string">'has-success has-feedback'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'has-error has-feedback'</span>);</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">9</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-variable-2">$</span>(<span class="cm-variable-2">element</span>).<span class="cm-property">closest</span>(<span class="cm-string">'.form-group'</span>).<span class="cm-property">find</span>(<span class="cm-string">'i.fa'</span>).<span class="cm-property">remove</span>();</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">10</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-variable-2">$</span>(<span class="cm-variable-2">element</span>).<span class="cm-property">closest</span>(<span class="cm-string">'.form-group'</span>).<span class="cm-property">append</span>(<span class="cm-string">'&lt;i class="fa fa-exclamation fa-lg form-control-feedback"&gt;&lt;/i&gt;'</span>);</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">11</div></div><pre class=" CodeMirror-line "><span>                }</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">12</div></div><pre class=" CodeMirror-line "><span>            },</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">13</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-property">unhighlight</span>: <span class="cm-keyword">function</span> (<span class="cm-def">element</span>, <span class="cm-def">errorClass</span>, <span class="cm-def">validClass</span>) {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">14</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-keyword">if</span> (<span class="cm-variable-2">element</span>.<span class="cm-property">type</span> <span class="cm-operator">===</span> <span class="cm-string">"radio"</span>) {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">15</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-keyword">this</span>.<span class="cm-property">findByName</span>(<span class="cm-variable-2">element</span>.<span class="cm-property">name</span>).<span class="cm-property">removeClass</span>(<span class="cm-variable-2">errorClass</span>).<span class="cm-property">addClass</span>(<span class="cm-variable-2">validClass</span>);</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">16</div></div><pre class=" CodeMirror-line "><span>                } <span class="cm-keyword">else</span> {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">17</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-variable-2">$</span>(<span class="cm-variable-2">element</span>).<span class="cm-property">closest</span>(<span class="cm-string">'.form-group'</span>).<span class="cm-property">removeClass</span>(<span class="cm-string">'has-error has-feedback'</span>).<span class="cm-property">addClass</span>(<span class="cm-string">'has-success has-feedback'</span>);</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">18</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-variable-2">$</span>(<span class="cm-variable-2">element</span>).<span class="cm-property">closest</span>(<span class="cm-string">'.form-group'</span>).<span class="cm-property">find</span>(<span class="cm-string">'i.fa'</span>).<span class="cm-property">remove</span>();</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">19</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-variable-2">$</span>(<span class="cm-variable-2">element</span>).<span class="cm-property">closest</span>(<span class="cm-string">'.form-group'</span>).<span class="cm-property">append</span>(<span class="cm-string">'&lt;i class="fa fa-check fa-lg form-control-feedback"&gt;&lt;/i&gt;'</span>);</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">20</div></div><pre class=" CodeMirror-line "><span>                }</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">21</div></div><pre class=" CodeMirror-line "><span>            }</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">22</div></div><pre class=" CodeMirror-line "><span>        });</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">23</div></div><pre class=" CodeMirror-line "><span><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">24</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-variable-2">$</span>(<span class="cm-string">"form"</span>).<span class="cm-property">validate</span>({</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">25</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-property">rules</span>: {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">26</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-string cm-property">'NickName'</span>: {</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">27</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-property">required</span>: <span class="cm-atom">true</span>,</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">28</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-property">minlength</span>: <span class="cm-number">5</span>,</span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">29</div></div><pre class=" CodeMirror-line "><span>                    <span class="cm-property">maxlength</span>: <span class="cm-number">20</span></span></pre></div><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">30</div></div><pre class=" CodeMirror-line "><span>                },</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; top: 1086px;"></div><div style="height: 1099px;" class="CodeMirror-gutters"><div style="width: 34px;" class="CodeMirror-gutter CodeMirror-linenumbers"></div></div></div></div></div>
+  <div style="display: none;" class="shim"></div>
+</fieldset>
+
+<div style="left: 835px;" class="handler" id="handler_vertical"></div>
+
+<fieldset class="column right">
+  <div class="window top" id="panel_css" data-panel_type="css">
+    <textarea style="display: none;" id="id_code_css" rows="10" cols="40" name="code_css"></textarea>
+    <a href="#" class="windowLabel" data-panel="css">
+      <span class="label">CSS</span><i class="bts bt-gear"></i>
+    </a>
+  <div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 39px;"><textarea tabindex="0" spellcheck="false" autocapitalize="off" autocorrect="off" style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: medium none;" wrap="off"></textarea></div><div cm-not-content="true" class="CodeMirror-vscrollbar"><div style="min-width: 1px; height: 0px;"></div></div><div cm-not-content="true" class="CodeMirror-hscrollbar"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div cm-not-content="true" class="CodeMirror-scrollbar-filler"></div><div cm-not-content="true" class="CodeMirror-gutter-filler"></div><div draggable="true" tabindex="-1" class="CodeMirror-scroll"><div style="margin-left: 35px; margin-bottom: -17px; border-right-width: 13px; min-height: 28px; padding-right: 0px; padding-bottom: 0px;" class="CodeMirror-sizer"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: medium none;"><div class="CodeMirror-measure"><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div style="left: 4px; top: 0px; height: 19.6px;" class="CodeMirror-cursor">&nbsp;</div></div><div class="CodeMirror-code"><div style="position: relative;"><div style="left: -35px;" class="CodeMirror-gutter-wrapper"><div style="left: 0px; width: 21px;" class="CodeMirror-linenumber CodeMirror-gutter-elt">1</div></div><pre class=" CodeMirror-line "><span><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; top: 28px;"></div><div style="height: 239px;" class="CodeMirror-gutters"><div style="width: 34px;" class="CodeMirror-gutter CodeMirror-linenumbers"></div></div></div></div></div>
+  <div style="top: 227px;" class="handler handler_horizontal"></div>
+  <div id="result" class="window bottom">
+    <iframe name="result" sandbox="allow-forms allow-popups allow-scripts allow-same-origin allow-modals" src="Edit%20fiddle%20-%20JSFiddle_files/a.htm" frameborder="0"></iframe>
+    
+  </div>
+  <div style="display: none;" class="shim"></div>
+</fieldset>
+
+<div class="windowSettings html">
+  <h3>Language</h3>
+<div class="selectCont">
+  <select name="panel_html" class="panelChoice" id="panel_html_choice" disabled="disabled" data-panel_id="id_code_html" data-panel="html">
+    
+      <option data-mime-type="text/html" value="0" selected="selected">HTML</option>
+    
+  </select>
+  <label for="js_lib"><i class="bts bt-angle-down"></i></label>
+</div> <!-- /selectCont -->
+
+<h3>Doctype</h3>
+<div class="selectCont">
+  <select name="doctype">
+    
+      <option id="dtd_XHTML 1.0 Strict" value="1">XHTML 1.0 Strict</option>
+    
+      <option id="dtd_XHTML 1.0 Transitional" value="2">XHTML 1.0 Transitional</option>
+    
+      <option selected="selected" id="dtd_HTML 5" value="3">HTML 5</option>
+    
+      <option id="dtd_HTML 4.01 Strict" value="4">HTML 4.01 Strict</option>
+    
+      <option id="dtd_HTML 4.01 Transitional" value="5">HTML 4.01 Transitional</option>
+    
+      <option id="dtd_HTML 4.01 Frameset" value="6">HTML 4.01 Frameset</option>
+    
+  </select>
+  <label for="doctype"><i class="bts bt-angle-down"></i></label>
+</div>
+
+<h3>Body tag</h3>
+<p>
+  <label>
+    <input id="id_body_tag" name="body_tag" maxlength="255" type="text">
+  </label>
+</p>
+
+</div> <!-- /windowSettings -->
+
+<div class="windowSettings js">
+  
+
+
+<h3>Language</h3>
+<div class="selectCont">
+  <select name="panel_js" class="panelChoice" id="panel_js_choice" data-panel_id="id_code_js" data-panel="js">
+    
+      <option data-mime-type="text/javascript" value="0" selected="selected">JavaScript</option>
+    
+      <option data-mime-type="text/x-coffeescript" value="1">CoffeeScript</option>
+    
+      <option data-mime-type="application/javascript;version=1.7" value="2">JavaScript 1.7</option>
+    
+      <option data-mime-type="text/babel" value="3">Babel</option>
+    
+      <option data-mime-type="text/typescript" value="4">TypeScript</option>
+    
+  </select>
+  <label for="js_lib"><i class="bts bt-angle-down"></i></label>
+</div> <!-- /selectCont -->
+
+<h3>Frameworks &amp; Extensions</h3>
+
+  
+    
+<div class="selectCont">
+  <select name="js_lib" id="js_lib">
+    
+    <optgroup label="Mootools">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        <option value="59">Mootools (nightly)</option>
+      
+        <option value="327">Mootools 1.6.0 (compat)</option>
+      
+        <option value="325">Mootools 1.6.0</option>
+      
+        <option value="329">Mootools 1.5.2 (compat)</option>
+      
+        <option value="263">Mootools 1.5.2</option>
+      
+        
+      
+        
+      
+        <option value="216">Mootools 1.5.1</option>
+      
+        
+      
+        <option value="208">Mootools 1.5.0</option>
+      
+        <option value="96">Mootools 1.4.5 (compat)</option>
+      
+        <option value="95">Mootools 1.4.5</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        <option value="63">Mootools 1.3.2 (compat)</option>
+      
+        <option value="62">Mootools 1.3.2</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="jQuery">
+      
+        
+      
+        
+      
+        <option value="46">jQuery (edge)</option>
+      
+        <option value="323">jQuery 3.1.0 Slim</option>
+      
+        <option value="321">jQuery 3.1.0</option>
+      
+        
+      
+        
+      
+        <option value="313">jQuery 3.0.0 Slim</option>
+      
+        <option value="311">jQuery 3.0.0</option>
+      
+        <option value="319">jQuery 2.2.4</option>
+      
+        <option value="305">jQuery 2.2.3</option>
+      
+        <option value="303">jQuery 2.2.2</option>
+      
+        <option value="295">jQuery 2.2.1</option>
+      
+        <option value="291">jQuery 2.2.0</option>
+      
+        
+      
+        <option value="248">jQuery 2.1.3</option>
+      
+        <option value="188" selected="selected">jQuery 2.1.0</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        <option value="131">jQuery 1.9.1</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Prototype">
+      
+        
+      
+        <option value="265">Prototype 1.7.3</option>
+      
+        <option value="254">Prototype 1.7.2</option>
+      
+        <option value="54">Prototype 1.7.1</option>
+      
+        <option value="4">Prototype 1.6.1.0</option>
+      
+    </optgroup>
+    
+    <optgroup label="YUI">
+      
+        
+      
+        <option value="230">YUI 3.17.2</option>
+      
+        <option value="204">YUI 3.16.0</option>
+      
+        <option value="182">YUI 3.14.0</option>
+      
+        <option value="153">YUI 3.10.1</option>
+      
+        
+      
+        <option value="130">YUI 3.8.0</option>
+      
+        <option value="123">YUI 3.7.3</option>
+      
+        <option value="118">YUI 3.6.0</option>
+      
+        <option value="102">YUI 3.5.0</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        <option value="9">YUI 2.8.0r4</option>
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Glow">
+      
+        
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="No-Library">
+      
+        <option value="11">No-Library (pure JS)</option>
+      
+    </optgroup>
+    
+    <optgroup label="Dojo">
+      
+        <option value="87">Dojo (nightly)</option>
+      
+        <option value="240">Dojo 1.10.4</option>
+      
+        
+      
+        
+      
+        <option value="242">Dojo 1.9.7</option>
+      
+        
+      
+        
+      
+        
+      
+        <option value="244">Dojo 1.8.10</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        <option value="246">Dojo 1.7.8</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        <option value="196">Dojo 1.6.2</option>
+      
+        
+      
+        
+      
+        <option value="194">Dojo 1.5.3</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Processing.js">
+      
+        <option value="206">Processing.js 1.4.7</option>
+      
+        <option value="135">Processing.js 1.4.1</option>
+      
+        <option value="81">Processing.js 1.3.6</option>
+      
+        <option value="67">Processing.js 1.2.3</option>
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="ExtJS">
+      
+        <option value="256">ExtJS 5.1.0</option>
+      
+        <option value="258">ExtJS 5.0.0</option>
+      
+        <option value="147">ExtJS 4.2.0</option>
+      
+        <option value="80">ExtJS 4.1.1</option>
+      
+        <option value="107">ExtJS 4.1.0</option>
+      
+        
+      
+        <option value="109">ExtJS 3.4.0</option>
+      
+        <option value="23">ExtJS 3.1.0</option>
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Raphael">
+      
+        <option value="76">Raphael 2.1.0</option>
+      
+        <option value="36">Raphael 1.5.2 (min)</option>
+      
+        <option value="30">Raphael 1.4</option>
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="RightJS">
+      
+        <option value="136">RightJS 2.3.1</option>
+      
+        <option value="45">RightJS 2.1.1</option>
+      
+    </optgroup>
+    
+    <optgroup label="Three.js">
+      
+        <option value="82">Three.js r54</option>
+      
+    </optgroup>
+    
+    <optgroup label="Zepto">
+      
+        <option value="90">Zepto 1.0rc1</option>
+      
+    </optgroup>
+    
+    <optgroup label="Enyo">
+      
+        <option value="115">Enyo (nightly)</option>
+      
+        <option value="299">Enyo 2.7.0</option>
+      
+        <option value="238">Enyo 2.5.1</option>
+      
+        <option value="214">Enyo 2.4.0</option>
+      
+        <option value="145">Enyo 2.2.0</option>
+      
+        <option value="121">Enyo 2.1</option>
+      
+        <option value="116">Enyo 2.0.1</option>
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Shipyard">
+      
+        <option value="99">Shipyard (nightly)</option>
+      
+        <option value="105">Shipyard 0.2</option>
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Knockout.js">
+      
+        <option value="277">Knockout.js 3.4.0</option>
+      
+        <option value="172">Knockout.js 3.0.0</option>
+      
+        <option value="163">Knockout.js 2.3.0</option>
+      
+        <option value="122">Knockout.js 2.2.1</option>
+      
+        <option value="117">Knockout.js 2.1.0</option>
+      
+        <option value="104">Knockout.js 2.0.0</option>
+      
+    </optgroup>
+    
+    <optgroup label="The X Toolkit">
+      
+        <option value="106">The X Toolkit edge</option>
+      
+    </optgroup>
+    
+    <optgroup label="AngularJS">
+      
+        <option value="281">AngularJS 2.0.0-alpha.47</option>
+      
+        <option value="283">AngularJS 1.4.8</option>
+      
+        <option value="180">AngularJS 1.2.1</option>
+      
+        <option value="137">AngularJS 1.1.1</option>
+      
+        
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Ember">
+      
+        <option value="190">Ember (latest)</option>
+      
+        
+      
+        
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Underscore">
+      
+        <option value="267">Underscore 1.8.3</option>
+      
+        <option value="160">Underscore 1.4.4</option>
+      
+        <option value="133">Underscore 1.4.3</option>
+      
+        <option value="111">Underscore 1.3.3</option>
+      
+    </optgroup>
+    
+    <optgroup label="Bonsai">
+      
+        <option value="120">Bonsai 0.4.1</option>
+      
+    </optgroup>
+    
+    <optgroup label="KineticJS">
+      
+        <option value="139">KineticJS 4.3.1</option>
+      
+        <option value="124">KineticJS 4.0.5</option>
+      
+    </optgroup>
+    
+    <optgroup label="FabricJS">
+      
+        <option value="250">FabricJS 1.5.0</option>
+      
+        <option value="178">FabricJS 1.4.0</option>
+      
+        <option value="161">FabricJS 1.2.0</option>
+      
+        <option value="125">FabricJS 0.9</option>
+      
+    </optgroup>
+    
+    <optgroup label="qooxdoo">
+      
+        <option value="126">qooxdoo 2.1</option>
+      
+        <option value="127">qooxdoo 2.0.3</option>
+      
+    </optgroup>
+    
+    <optgroup label="D3">
+      
+        <option value="134">D3 3.x</option>
+      
+    </optgroup>
+    
+    <optgroup label="CreateJS">
+      
+        <option value="279">CreateJS 2015.05.21</option>
+      
+        <option value="170">CreateJS 2013.09.25</option>
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="WebApp Install">
+      
+        <option value="142">WebApp Install 0.1</option>
+      
+    </optgroup>
+    
+    <optgroup label="Thorax">
+      
+        <option value="174">Thorax 2.0.0rc6</option>
+      
+        <option value="143">Thorax 2.0.0rc3</option>
+      
+    </optgroup>
+    
+    <optgroup label="Paper.js">
+      
+        <option value="158">Paper.js 0.22</option>
+      
+    </optgroup>
+    
+    <optgroup label="React">
+      
+        <option value="285">React 0.14.3</option>
+      
+        <option value="192">React 0.9.0</option>
+      
+        <option value="184">React 0.8.0</option>
+      
+        <option value="166">React 0.4.0</option>
+      
+        <option value="159">React 0.3.2</option>
+      
+    </optgroup>
+    
+    <optgroup label="svg.js">
+      
+        <option value="269">svg.js 2.1.1</option>
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="Minified">
+      
+        <option value="164">Minified 1.0 beta1</option>
+      
+    </optgroup>
+    
+    <optgroup label="jTypes">
+      
+        <option value="165">jTypes 2.1.0</option>
+      
+    </optgroup>
+    
+    <optgroup label="Lo-Dash">
+      
+        <option value="167">Lo-Dash 2.2.1</option>
+      
+    </optgroup>
+    
+    <optgroup label="Brick">
+      
+        <option value="176">Brick edge</option>
+      
+    </optgroup>
+    
+    <optgroup label="RactiveJS">
+      
+        
+      
+        
+      
+        <option value="287">RactiveJS 0.7.3</option>
+      
+    </optgroup>
+    
+    <optgroup label="Vue">
+      
+        <option value="236">Vue (edge)</option>
+      
+        <option value="289">Vue 1.0.12</option>
+      
+        
+      
+    </optgroup>
+    
+    <optgroup label="JSBlocks">
+      
+        <option value="252">JSBlocks (edge)</option>
+      
+    </optgroup>
+    
+    <optgroup label="OpenUI5">
+      
+        <option value="271">OpenUI5 (latest, mobile)</option>
+      
+    </optgroup>
+    
+    <optgroup label="MithrilJS">
+      
+        <option value="273">MithrilJS 0.2.0</option>
+      
+    </optgroup>
+    
+    <optgroup label="Pixi">
+      
+        <option value="315">Pixi 3.0.11</option>
+      
+    </optgroup>
+    
+  </select>
+  <label for="js_lib"><i class="bts bt-angle-down"></i></label>
+</div>
+
+<ul id="js_dependency">
+  
+  <li>
+    <label class="checkboxCont">
+      <input id="dep_208" name="js_dependency[208]" value="208" type="checkbox">
+      <span class="checkbox"><i class="bts bt-check"></i></span>
+      jQuery Mobile 1.4.2
+    </label>
+  </li>
+
+  <li>
+    <label class="checkboxCont">
+      <input id="dep_224" name="js_dependency[224]" value="224" type="checkbox">
+      <span class="checkbox"><i class="bts bt-check"></i></span>
+      Bootstrap 3.2.0
+    </label>
+  </li>
+
+  <li>
+    <label class="checkboxCont">
+      <input id="dep_226" name="js_dependency[226]" value="226" type="checkbox">
+      <span class="checkbox"><i class="bts bt-check"></i></span>
+      Bootstrap 2.3.2
+    </label>
+  </li>
+
+
+</ul>
+
+  
+
+
+<h3>Load type</h3>
+<div class="selectCont">
+  <select name="js_wrap" id="id_js_wrap">
+<option value="l" selected="selected">onLoad</option>
+<option value="d">onDomready</option>
+<option value="h">No wrap - in &lt;head&gt;</option>
+<option value="b">No wrap - in &lt;body&gt;</option>
+</select>
+  <label for="js_wrap"><i class="bts bt-angle-down"></i></label>
+</div>
+
+
+  <h3>Framework &lt;script&gt; attribute</h3>
+  <p class="libraryTagAttributes">
+    <label>
+      <input id="id_js_lib_option" name="js_lib_option" maxlength="255" placeholder="ie. data-type=&quot;&quot;" type="text">
+    </label>
+  </p>
+
+
+<script type="text/javascript">
+  window.addEvent('load', function() {
+    $('js_lib').addEvent('change', function() {
+      mooshell.loadDependencies(this.value);
+    })
+    if ($('library_group')) $('library_group').addEvent('change', function() {
+      mooshell.loadLibraryVersions(this.value);
+    })
+  });
+</script>
+
+</div> <!-- /windowSettings -->
+
+<div class="windowSettings css">
+  <h3>Language</h3>
+<div class="selectCont">
+  <select name="panel_css" class="panelChoice" id="panel_css_choice" data-panel_id="id_code_css" data-panel="css">
+    
+      <option data-mime-type="text/x-scss" value="0" selected="selected">CSS</option>
+    
+      <option data-mime-type="text/x-scss" value="1">SCSS</option>
+    
+  </select>
+  <label for="js_lib"><i class="bts bt-angle-down"></i></label>
+</div> <!-- /selectCont -->
+
+<h3>Options</h3>
+<p id="normalize_check">
+  <label class="checkboxCont"><input name="normalize_css" id="id_normalize_css" type="checkbox"><span class="checkbox"><i class="bts bt-check"></i></span> Normalized CSS</label>
+</p>
+
+</div> <!-- /windowSettings -->
+
+        </div>
+      
+    </form><div style="height: 463px; top: 44px; left: 21px;" id="HW_frame_cont"><div id="HW_frame_peak"></div><iframe style="height: 463px;" src="Edit%20fiddle%20-%20JSFiddle_files/1xGMJQ.htm" id="HW_frame"></iframe></div><style>#HW_badge_cont {
+  display: none;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  position: relative;
+}
+
+#HW_badge_cont.HW_visible {
+  display: block;
+}
+
+#HW_badge {
+  display: block;
+  border-radius: 20px;
+  background: #CD4B5B;
+  height: 16px;
+  width: 16px;
+  color: #fff;
+  text-align: center;
+  line-height: 16px;
+  font-size: 11px;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s;
+}
+
+#HW_badge.HW_softHidden {
+  background: #d4d4d4;
+  opacity: 1;
+  transform: scale(0.6);
+}
+
+#HW_badge.HW_hidden {
+  opacity: 0;
+  transform: scale(0);
+}
+
+#HW_badge.HW_visible {
+  opacity: 1;
+  transform: scale(1.0);
+}
+
+#HW_frame_cont {
+  visibility: hidden;
+  border-radius: 4px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.25);
+  background: #fff;
+  border: none;
+  position: absolute;
+  z-index: 999;
+  width: 300px;
+  height: 300px;
+  transition: height 0.3s;
+}
+
+#HW_frame_cont.HW_visible {
+  visibility: visible;
+}
+
+#HW_frame_peak {
+  width: 20px;
+  height: 20px;
+  content: "";
+  position: absolute;
+  z-index: 888;
+  top: -10px;
+  left: 22px;
+  background: #fff;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.25);
+  transform: rotate(45deg);
+}
+
+#HW_frame_peak.HW_rightAlign {
+  left: auto;
+  right: 22px;
+}
+
+#HW_frame {
+  background: #fff;
+  border: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative;
+  z-index: 900;
+  transition: height 0.3s;
+}</style>
+
+    
+
+<script>
+  TogetherJSConfig_enableAnalytics = true;
+  TogetherJSConfig_cloneClicks = "#run, .toggler";
+  TogetherJSConfig_toolName = "Collaboration"
+</script>
+<script defer="defer" src="Edit%20fiddle%20-%20JSFiddle_files/togetherjs.js"></script>
+
+
+    
+
+  
+
+<span class="CodeMirror-error-tooltip"></span></body></html>

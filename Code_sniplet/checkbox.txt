@@ -1,0 +1,27 @@
+onNotifications values:
+1 - bet_race_start
+2 - bet_race_over
+4 - app_reminder
+8 - horse_cancelled
+16 - race_cancelled
+
+
+
+            var t = 0;
+            if ($('#race_cancelled').is(":checked")) {
+                t = $('#race_cancelled').val();
+
+            }
+           
+          
+
+            $('#btnSaveNotificationForm').click(function (e) {
+                alert(t);
+
+                var res = $("#race_cancelled").attr("checked") ? 1 : 0;
+                alert(res);
+            });
+			
+			
+			     $("#horse_cancelled").prop('checked', true);
+				   $("#app_reminder").prop('checked', false);

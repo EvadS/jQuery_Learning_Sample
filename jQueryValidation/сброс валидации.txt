@@ -1,0 +1,2 @@
+ // var validator = $("#editModalForm").validate();
+              //  validator.resetForm();

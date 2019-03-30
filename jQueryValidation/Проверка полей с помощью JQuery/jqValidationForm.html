@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Bootstrap and jQuery</title>
+    <meta charset="windows-1251">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <h2></h2>
+    <div class="container">
+        <form class="cmxform" id="testform" action="" method="post">
+            <input id="Name" type="text" name="Name" value="" class="required" />
+
+            <!--validation rules-->
+            <div class="form-control">
+                <label>middle name</label>
+                <input class="zip" type="text" name="mName" />
+            </div>           
+
+            <div class="form-control">
+                <label>street</label>
+                <input class="zip" type="text" name=" user.address.street" />
+            </div>
+
+            <div class="form-control">
+                <input class="zip" type="text" name="zipCode" />
+            </div>
+            <div class="form-control">
+                <input class="zip2" type="text" name="zipCode2" />
+            </div>
+            <input type="submit" value="Submit" />
+
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#testform").validate({
+                rules: {
+
+                    // no quoting necessary
+                    mName: "required",
+                    // quoting necessary!
+                    "user[email]": "email",
+                    // dots need quoting, too!
+                    "user.address.street": "required"
+                }
+
+
+            });
+
+            $.validator.addClassRules({
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                zip: {
+                    required: true,
+                    digits: true,
+                    minlength: 5,
+                    maxlength: 5
+                },
+            });
+
+            $.validator.addMethod("cRequired", $.validator.methods.required,   "почтовый индекс почемуто обязательный");
+            $.validator.addClassRules("zip2", { cRequired: true, cMinlength: 2 });
+
+
+
+
+        });
+    </script>
+
+</body>
+</html>

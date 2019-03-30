@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Bootstrap and jQuery</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="popover">
+            <div class="arrow">
+            </div>
+            <div class="popover-inner">
+                <div class="popover-content">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        
+        <form>
+            <fieldset>
+                <legend>Legend</legend>
+                <label>Label name</label>
+                <input name="test" type="text" placeholder="Type something…" />
+                <button type="submit" class="btn">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("form").validate({
+                rules: {
+                    test: {
+                        minlength: 3,
+                        required: true
+                    }
+                },
+                showErrors: function (errorMap, errorList) {
+                    $.each(this.successList, function (index, value) {
+                        return $(value).popover("hide");
+                    });
+                    return $.each(errorList, function (index, value) {
+                        var _popover;
+                        console.log(value.message);
+                        _popover = $(value.element).popover({
+                            trigger: "manual",
+                            placement: "top",
+                            content: value.message,
+                            template: "<div class=\"popover\"><div class=\"arrow\"></div><div class=\"popover-inner\"><div class=\"popover-content\"><p></p></div></div></div>"
+                        });
+                        _popover.data("popover").options.content = value.message;
+                        return $(value.element).popover("show");
+                    });
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>

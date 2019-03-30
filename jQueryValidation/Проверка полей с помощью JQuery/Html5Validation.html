@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Bootstrap and jQuery</title>
+    <meta charset="windows-1251">
+	
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+   
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    
+</head>
+<body>
+    <div class="container">	
+   
+<h2>Login</h2>
+<form action="" autocomplete="off">
+    <label for="username">Username</label>
+    <input id="username" name="username" pattern="[a-zA-Z0-9]{5,}" title="Minimum 5 letters or numbers." required>
+    <!-- Credit: http://stackoverflow.com/questions/5458076/regex-in-new-pattern-attr-for-html5-forms -->
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" pattern=".{5,}" title="Minmimum 5 letters or numbers." required>
+    <p/>
+    <input type="submit" class="btn" value="Login">
+
+</form>
+
+<h2>Register</h2>
+<form action="" autocomplete="off">
+    <label for="username2">Username</label>
+    <input id="username2" name="username" pattern="[a-zA-Z0-9]{5,}" title="Minmimum 5 letters or numbers."  required>
+
+    <label for="password2">Password</label>
+    <input id="password2" name="password" type="password" pattern=".{5,}" title="Minmimum 5 letters or numbers." required>
+
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required>
+
+    <label for="url">Homepage</label>
+    <input id="url" name="url" type="url">
+
+    <p/>
+    <input type="submit" class="btn" value="Register">
+
+</form>
+	
+           
+   
+   </div>
+
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<head>
+    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />
+	
+
+</head>
+<body>
+<h1>jQuery Validation With Twitter Bootstrap </h1>
+    
+	<div class="container">
+     <form method="POST" action="" class="form-horizontal" id="contact-form">
+       
+	   <div class="control-group">
+            <label class="control-label" for="name">Name</label>
+            <div class="controls">
+                <input type="text" name="name" id="name" placeholder="Your name">
+            </div>
+        </div>
+		
+        
+        <div class="control-group">
+            <label class="control-label" for="subject">Subject</label>
+            <div class="controls">
+                <select id="subject" name="subject">
+                    <option value="na" selected="">Choose One:</option>
+                    <option value="service">Feedback</option>
+                    <option value="suggestions">Suggestion</option>
+                    <option value="support">Question</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="message">Message</label>
+            <div class="controls">
+                <textarea name="message" id="message" rows="8" class="span5" placeholder="The message you want to send to us."></textarea>
+            </div>
+        </div>
+		
+		 <div class="input-group">
+                    <span class="input-group-addon"><i class="icon_profile"></i></span>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="email" autofocus>
+                </div>
+				
+        <div class="form-actions">
+            <input type="hidden" name="save" value="contact">
+            <button type="submit" class="btn btn-success">Submit Message</button>
+            <button type="reset" class="btn">Cancel</button>
+			  <button type="button" class="btn">teset</button>
+        </div>
+    </form>
+
+	</div>
+	
+    </form>
+
+
+    <script>
+        $(document).ready(function () {
+           
+    $('#contact-form').validate({
+        rules: {
+            name: {
+                minlength: 2,
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                minlength: 2,
+                required: true
+            }
+        },
+        highlight: function (element) {
+            $(element).closest('.control-group').removeClass('success').addClass('error');
+			 $(element).closest('.input-group').removeClass('success').addClass('error');
+        },
+        success: function (element) {
+            element.text('OK!').addClass('valid')
+                .closest('.control-group').removeClass('error').addClass('success');
+        }
+    });
+        });
+    </script>
+
+
+    <!--<script>
+        $(document).ready(function () {
+            $("#commentForm").validate();
+        });
+    </script>-->
+
+</body>

@@ -1,0 +1,16 @@
+  var ajaxRequest = $.ajax({
+            type: "POST",
+            url: baseurl + "/animations/create",
+            contentType: false,
+            processData: false,
+            data: formData,
+            beforeSend: function () {
+                console.log('before send');
+            },
+            success: function (data) {
+                alert(true);
+            },
+            error: function (xhr, status, p3) {                
+                console.log(xhr);
+            }
+        });

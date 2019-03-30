@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Bootstrap and jQuery</title>
+    <meta charset="windows-1251">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form class="cmxform" id="testform" action="" method="get">
+            <fieldset>
+                <legend>Please provide your name</legend>
+
+                <div class="form-group">
+                    <label for="userNameItem">Логин:</label>
+                    <input type="text" name="userName" class="form-control" id="#userNameItem" />
+                </div>
+
+                <div class="form-group">
+                    <label for="userNameItem">пароль:</label>
+                    <input type="password" name="pswd" class="form-control" id="#pswd" />
+                </div>
+
+                <div class="form-group">
+                    <label for="mail">email:</label>
+                    <input name="сmail" class="form-control" id="#сmail" />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">phone:</label>
+                    <input type="tel" name="phone" class="form-control" id="#phone" />
+                </div>
+
+                <div class="row">
+                    <div class="pull-right">
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+
+
+
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#testform").validate({
+                rules: {
+                    userName: {
+                        required: true,
+                        minlength: 4,
+                        maxlength: 16,
+                    },
+                    pswd: {
+                        required: true,
+                        minlength: 6,
+                        maxlength: 16,
+                    },
+                    сmail: {
+                        required: true,
+                        email :true,
+                    }
+                },
+                messages: {
+                    userName: {
+                        required: "Это поле обязательно для заполнения",
+                        minlength: "Логин должен быть минимум 4 символа",
+                        maxlength: "Максимальное число символо - 16",
+                    },
+
+					 pswd: {
+					     required: "Это поле обязательно для заполнения",
+					     minlength: "Пароль должен быть минимум 6 символа",
+					     maxlength: "Пароль должен быть максимум 16 символов",
+					 },
+
+					 сmail: {
+					     required: "Это поле обязательно для заполнения",
+					     email: "Некорректный  формат почты",
+					 },
+                }
+            });
+
+        });
+    </script>
+
+</body>
+</html>

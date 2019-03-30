@@ -1,0 +1,28 @@
+﻿
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>jQuery</title>
+    <meta charset="utf-8">
+    <script src="node_modules\jquery\dist\jquery.js"></script> 
+</head>
+<body>
+    <div class="container">
+       <div class="d1">
+	   <p>see console log</p>
+	   </div>	 
+	</div>
+
+    <script>
+		
+		// sub создает копию объекта
+		$(document).ready(function () {
+           var my_$ = jQuery.sub();
+		
+			console.log('my_$' ,my_$);
+        });
+		
+   
+    </script>
+</body>
+</html>

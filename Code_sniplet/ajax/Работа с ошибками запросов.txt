@@ -1,0 +1,31 @@
+<style type="text/css">
+  .error {
+    color: red;
+    border: medium solid red;
+    padding: 4px;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+  }
+</style>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $.ajax("NoSuchFile.json", {
+      success: function (data, status, jqxhr) {
+        var template = $('#flowerTmpl');
+        template.tmpl(data.slice(0, 3)).appendTo("#row1");
+        template.tmpl(data.slice(3)).appendTo("#row2");
+      },
+      error: function (jqxhr, status, errorMsg) {
+        $('<div class=error/>')
+          .text("Status: " + status + " Error: " + errorMsg)
+          .insertAfter('h1');
+      },
+	   complete: function (jXHR, status) {
+        console.log("Completed: " + status);
+      }
+    });
+  });
+</script>
+
+В этом примере я запросил файл с именем NoSuchFile.json, которого не существует на веб сервере. Это гарантирует, что запрос не выполнится и будет вызвана функция, которую я указал настройкой error. Аргументами функции являются jqXHR объект, сообщение о статусе и сообщение об ошибке ответа сервера. В функцию я добавил элемент div, чтобы показать значение аргументов status и errorMsg,

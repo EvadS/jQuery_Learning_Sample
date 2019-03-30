@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Time Stam Converter</title>
+    <meta charset="windows-1251">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+<body>
+    <div class="container">
+
+
+    </div>
+
+    <script>
+
+        var firstSeptermber = 1504284599000;
+        var DATE_DELIMETER = '/';
+        //var resData  = timeStampToDate(firstSeptermber, DATE_DELIMETER)
+        //console.log(resData);
+
+
+     /*   var dateres = ddmmyyyToTimestamp("02/08/2017", DATE_DELIMETER)
+        console.log("start : " + firstSeptermber);
+        console.log("result loong : " + dateres);
+
+        resData = timeStampToDate(firstSeptermber, DATE_DELIMETER)
+        console.log("result date  : " + resData);
+   */
+        var testData = "02/08/2017";
+        console.log("my result date  : ");
+        resData = mmddyyyToTimestamp(testData, DATE_DELIMETER);
+        console.log("my result   : " + resData);
+        resData2 = timeStampToDate(resData, DATE_DELIMETER)
+        console.log(resData2);
+
+        function timeStampToDate(timestamp_,delimeter) {
+            var date = new Date(timestamp_);
+       
+            var day = date.getDate();
+            var mounth = "0" + date.getMonth();
+            var year = date.getFullYear();       
+
+            var formattedDate = ('0' + (date.getMonth() + 1)).slice(-2) + delimeter + ('0' + date.getDate()).slice(-2) + delimeter + date.getFullYear();
+            return formattedDate
+        }
+
+
+        function ddmmyyyToTimestamp(dateItem, delimeter) {
+            dateItem = dateItem.split(delimeter);
+
+            var year = dateItem[2];
+            var mounth = dateItem[0]-1;
+            var day = dateItem[1];			 
+
+			var res = new Date(year, mounth, day,0,0,0).getTime();
+            return res;
+        }
+
+        function mmddyyyToTimestamp(dateItem, delimeter) {
+            dateItem = dateItem.split(delimeter);
+
+            var year = dateItem[2];
+            var mounth = dateItem[0]-1;
+            var day = dateItem[1];
+
+            var res = new Date(year, mounth, day, 0, 0, 0).getTime();
+            return res;
+        }
+
+    </script>
+
+</body>
+</html>

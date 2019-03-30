@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Bootstrap and jQuery</title>
+    <meta charset="windows-1251">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <form class="cmxform" id="testform" action="" method="get">
+            <fieldset>
+                <legend>Please provide your name</legend>
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input id="Name" type="text" name="Name" class="form-control required" value="" />
+                </div>
+				
+				<div class="form-group">
+                    <label for="lName">Last Name</label>
+                    <input id="lName" type="text" name="lastName2" class="form-control" value="" />
+                </div>
+				
+                <!--validation rules-->
+                <div class="form-group">
+                    <label>middle name</label>
+                    <input class="zip form-control" type="text" name="mName" />
+                </div>
+
+                <div class="form-group">
+                    <label>street</label>
+                    <input class="zip form-control " type="text" name=" user.address.street" />
+                </div>
+
+                <div class="form-group">
+                    <label for="zip">zip:</label>
+                    <input class="zip form-control " type="text" name="zipCode" />
+                </div>
+
+                <div class="form-group">
+                    <label for="zip2">zip2:</label>
+                    <input class="zip2 form-control " type="text" name="zipCode2" />
+                </div>
+
+                <div class="row">
+                    <div class="pull-right">
+                        <button type="reset" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+		
+		<h2>Activate Modal with JavaScript</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" id="myBtn">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#testform").validate({
+                rules: {		
+					lastName: "required",								
+                    // no quoting necessary
+                    mName: "required",
+                    // quoting necessary!
+                    "user[email]": "email",
+                    // dots need quoting, too!
+                    "user.address.street": "required"
+                }
+            });
+
+            $.validator.addClassRules({
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+				
+                zip: {
+                    required: true,
+                    digits: true,
+                    minlength: 5,
+                    maxlength: 5
+                },
+            });
+
+            $.validator.addMethod("cRequired", $.validator.methods.required, "почтовый индекс почему - то обязательный");
+            $.validator.addClassRules("zip2", { cRequired: true, cMinlength: 2 });
+
+		  $("#myBtn").click(function(){
+				$("#myModal").modal();
+			});
+
+
+        });
+    </script>
+
+</body>
+</html>

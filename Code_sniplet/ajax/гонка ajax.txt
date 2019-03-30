@@ -1,0 +1,43 @@
+
+предотвращаем гонку запросов 
+
+беда в том что при загрузке страницы выполняется  загрузка данных в асинхронном режиме 
+мы не можем блокировать элемент посредство которого запущено запрос 
+также не можем хранить статическую переменную - флаг - поскольку полностью перезагружается страница 
+
+
+итак ссылка для перехода на нашу страницу 
+ <li><a class="sidebar-nav-link-admin" href="Administrators.html">Administrators</a></li>
+ 
+ 
+ -- функция блокировки 
+ function blockingConcurrentAjaxAdminPage(e) {
+    var delay = 1; //sec per next request
+    var contentLoading = localStorage.getItem('sidebarAdmin');
+
+    if (contentLoading && (new Date()) - contentLoading < delay * 1000) {
+        e.preventDefault();
+        return false;
+    }
+
+    localStorage.setItem('sidebarAdmin', +(new Date()));
+}
+
+
+// вешаем функцию блокировки на ссылку по клаассу
+$(".sidebar-nav-link-admin").on('click', function (e) {
+    blockingConcurrentAjaxAdminPage(e);    
+});
+
+также на странице 
+$(document).ready(function () {
+            //.........
+
+			// аналогично закрываем обновление посредством F5
+            $("body").keydown(function (e) {
+                if (e.which === 116) {
+
+                    blockingConcurrentAjaxAdminPage(e);
+                }
+            });
+			//............

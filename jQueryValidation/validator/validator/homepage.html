@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>Validation</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/engine.js"></script>
+</head>
+<body>
+<form method="post" action="/" id="form1" name="form1">
+	<label>Имя:</label> <input type="text" minlength="1" size="25" value="" name="yourname" /><br/>
+	<label>E-mail:</label> <input type="text" minlength="1" size="25" value="" name="yourmail" /><br/>
+	<label>Телефон:</label> <input type="text" size="25" value="" name="phone" /><br/>
+	<label>Тема:</label> <input type="text" size="25" value="" name="theme" /><br/>
+	<textarea rows="10" cols="50" name="msg" /></textarea>
+	<fieldset>
+		<legend>Откуда вы о нас узнали?</legend>
+		<input type="checkbox" value="Из сети" name="checkbox1" id="checkbox1" />&nbsp;<label for="checkbox1">Из сети</label><br/>
+		<input type="checkbox" value="Обновление коллекции" name="checkbox2" id="checkbox2" />&nbsp;<label for="checkbox2">Обновление коллекции</label><br/>
+		<input type="checkbox" value="Другие источники" name="checkbox3" id="checkbox3" />&nbsp;<label for="checkbox3">Другие источники</label>
+	</fieldset>
+	<input type="submit" value="Отправить" name="Submit"/>
+</form>
+</body>
+</html>

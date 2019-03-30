@@ -1,0 +1,13 @@
+  var test2;
+  
+  // перебираем все елементы с указанным классом 
+            $('.select-element').each(function (i, obj) {
+                /// непосредственно елемент 
+                var ttt = $(this);
+
+                // непосредственно id
+                console.log( this.id );
+                console.log(ttt.val());
+              ///  test2 = $(this).val();
+               /// console.log(test2);
+            });

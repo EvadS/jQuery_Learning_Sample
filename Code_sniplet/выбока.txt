@@ -1,0 +1,3 @@
+  
+// по id  убрать все строки кроме первой 
+ $('#tblBodyResolution').children('tr:not(:first)').remove();

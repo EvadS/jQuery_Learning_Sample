@@ -1,0 +1,23 @@
+
+i#tblBodyItems d таблицы 
+'.btn-tbl-delete' - класс кнопки на которую кликнули 
+                $('#tblBodyItems').on('click', '.btn-tbl-delete', function (e) {
+                   
+				   ..2 взаимозаменяемых случая 
+				   var shosenRow = $(this).parent().parent();      
+                   
+				  var $row = $(this).closest("tr"),       // Finds the closest row <tr> 
+                            $tds = $row.find("td");
+
+							/вывести значения ячеек строки в консоль 
+                    $.each($tds, function () {               // Visits every single <td> element
+                        console.log($(this).text());        // Prints out the text within the <td>
+                    });
+
+					//способ 2 - конкретная ячейка - поиск по классу 
+                    var $row = jQuery(this).closest("tr");
+                    var text = $row.find(".user-name").text();
+
+                    console.log(text);
+
+                });

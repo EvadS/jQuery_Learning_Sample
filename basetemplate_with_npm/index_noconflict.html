@@ -1,0 +1,59 @@
+﻿
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>jQuery</title>
+    <meta charset="utf-8">
+    <script src="node_modules\jquery\dist\jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="d1">
+            <p>Содержимое контейнера</p>
+        </div>
+    </div>
+
+    <script>
+
+        // создаем копию
+        (function () {
+            var sub$ = $;
+            sub$.fn.myNewMethod = function () {
+                return "Значение из нашего метода";
+            };
+        }());
+
+        $(document).ready(function ($) {
+            // $ доступен только внутри ready
+            console.log($('.container').myNewMethod());
+
+            // беда с потоками (время )
+            $('.d1').closeNormal();
+            setTimeout(function () {
+                $('.d1').open();
+            }, 1200);
+
+        });
+
+        // создание своих цепочек вызова
+        $.fn.extend({
+            open: function () {
+                console.log('open');
+                return this.show();
+            },
+            close: function (time) {
+                console.log('close');
+                return this.hide(time);// для того чтобы работала вся цепочка
+            },
+            closeNormal: function () {
+                return this.hide(1000);// для того чтобы работала вся цепочка
+            },
+            closeFast: function () {
+                return this.hide(300);// для того чтобы работала вся цепочка
+            }
+        });
+
+
+    </script>
+</body>
+</html>
